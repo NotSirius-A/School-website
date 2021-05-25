@@ -1,0 +1,45 @@
+:root {
+    --article-padding-left: 25px;
+    --article-padding-right: 25px; 
+    --title-padding-topbottom: 15px;
+}
+
+.article-entire {
+    background-color: inherit;
+    min-height: 400px;
+}
+
+.article-entire-title {
+    padding-left: var(--article-padding-left);
+    padding-right: var(--article-padding-right);
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: -0.035em;
+
+    padding-top: var(--title-padding-topbottom);
+    padding-bottom: 5px;
+    background-color: inherit;
+}
+
+.article-entire-date {
+    padding-left: var(--article-padding-left);
+    padding-right: var(--article-padding-right);
+    font-size: 13px;
+    color: grey;
+    padding-bottom: var(--title-padding-topbottom);
+    background-color: inherit;
+}
+
+.article-entire-text {
+    padding-left: var(--article-padding-left);
+    padding-right: var(--article-padding-right);
+    margin-bottom: 30px;
+    font-size: 16px;
+    border-top: 1px solid #101010;
+    background-color: inherit;
+}
+
+.article-entire-text > p {
+    padding-bottom: 10px;
+    line-height: 1.4;
+}

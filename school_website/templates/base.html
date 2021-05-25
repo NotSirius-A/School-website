@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Gordon Freeman Highschool</title>
+        <link rel="stylesheet" href="{% static 'styles.css' %}" />
+        <link rel="icon" href="{% static 'favicon.ico' %}" />
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="up-left-filler"></div>
+            <div class="left-filler"></div>
+
+            <header>
+                <div class="header-container">
+                    {% include 'header.html' %}
+                </div>
+            </header>
+
+            <div class="up-right-filler"></div>
+            <div class="right-filler"></div>
+
+            <div class="main-content-container">
+                {% block content %}
+                    replace me
+                {% endblock %}
+            </div>
+
+            <footer>
+                <div class="footer-container">
+                    {% include 'footer.html' %}
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

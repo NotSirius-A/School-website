@@ -1,0 +1,32 @@
+.article-form {
+    padding: 30px 20px 50px 20px;
+    border: black dotted 1px;
+    margin: 20px 20px 20px 20px;
+}
+
+.article-form-button {
+    background-color: rgb(0, 76, 255);
+    width: 150px;
+    height: 60px;
+    border: black solid 3px;
+    font-weight: 600;
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 1px;
+    color: white;
+    font-family: inherit;
+}
+
+.errorlist {
+    color: #ca1616;
+    font-weight: 400;
+}
+
+textarea {
+    width: 75%;
+    height: 400px;
+}
+
+.helptext {
+    color: #332f2f;
+    font-size: 13px;
+}

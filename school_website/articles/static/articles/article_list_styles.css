@@ -1,0 +1,120 @@
+.info-bar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    background-color: lightgrey;
+    color: #444;
+}
+
+.article-list {
+    background-color: inherit;
+    padding-top: 15px;
+}
+
+.article-list-element{
+    border-bottom: 1px solid rgb(116, 116, 116);
+    padding: 10px 30px 30px 20px;
+}
+
+.article-list-element a:link {
+    text-decoration: none;
+}
+
+.article-list-element a:hover {
+    color: #840e41;
+}
+
+.article-list-element-title {
+    padding-bottom: 5px;
+}
+
+.article-list-element-title > a:link {
+    font-size: 28px;
+    letter-spacing: -0.8px;
+}
+
+.article-list-element-title a {
+    color: black;
+    word-wrap: break-word;
+}
+
+
+.article-list-element-date {
+    padding-bottom: 5px;
+}
+
+.article-list-element-date > a:link {
+    font-size: 13px;
+}
+
+.article-list-element-date a {
+    color: grey;
+}
+
+.article-list-element-snippet {
+    padding-bottom: 5px;
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+
+.page-selector-container {
+    background-color: #fff;
+    height: 55px;
+    display: flex;
+    align-items: center;
+
+    margin: 15px 0 15px 0;
+}
+
+.page-selector-content {
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    
+    font-size: 18px;
+}
+
+.page-selector-content a{
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+}
+
+.page-selector-content a {
+    padding: 7px 11px 7px 11px; 
+    border: 2px solid rgba(180, 180, 180, 0.383);
+    background-color: rgba(180, 180, 180, 0.313);
+    border-radius: 8%;
+}
+
+.page-selector-content a:hover {
+    color: rgb(3, 25, 218);
+    background-color: rgb(122, 122, 122);
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 2px solid;
+}
+
+.page-backward {
+    margin-right: 5px;
+}
+
+.page-forward {
+    margin-left: 5px;
+}
+
+.first-page {
+    margin-right: 35px;
+}
+
+.last-page {
+    margin-left: 35px;
+}
+
+.current-page {
+    font-weight: 600;
+    margin: 0 10px 0 10px;
+    color: #840e41 !important;
+}

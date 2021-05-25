@@ -1,0 +1,57 @@
+.login-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "left-filler login-form-container right-filler";
+    grid-template-columns: 3fr 4fr 3fr;
+    grid-template-rows: auto;
+}
+
+.left-filler {
+    grid-area: left-filler;
+}
+
+.login-form-container {
+    grid-area: login-form-container;
+    margin: 80px 0 80px 0;
+    padding: 20px 0 20px 0;
+    border: 2px solid #840e41;
+    border-radius: 1%;
+}
+
+.right-filler {
+    grid-area: right-filler;
+}
+
+
+.login-form label {
+    display: flex;
+    justify-content: center;
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {
+    font-size: 22px;
+    padding: 5px 5px 5px 5px;
+    width: 80%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-form input[type=submit] {
+    width: 30%;
+    height: 3em;
+
+    background-color: rgb(0, 185, 46, 0.9);
+    border: 2px outset rgb(0, 185, 46, 1);
+    border-radius: 2%;
+
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login-form input[type=submit]:active {
+    background-color: rgb(0, 185, 46, 0.8);
+    border: 2px inset rgb(0, 185, 46, 0.7);
+}

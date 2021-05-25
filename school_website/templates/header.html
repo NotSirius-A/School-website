@@ -1,0 +1,32 @@
+{% load static %}
+
+
+<div class="header-logo">
+    <a href="{% url 'article_list' %}"><img src='{% static "school_logo.png" %}'></img></a>
+</div>
+<div class="header-other">
+    <img src='{% static "school_photo.png" %}'></img>
+</div>
+
+<div class="header-navbar">
+
+    <div class="header-navbar-item">
+        <a href="{% url 'article_list' %}">Homepage</a>
+    </div>
+
+    <div class="header-navbar-item">
+        <a href="{% url 'article_entire' 'about' %}">About</a>
+    </div>
+
+    <div class="header-navbar-item">
+        <a href="{% url 'article_entire' 'recruiting' %}">Recruiting</a>
+    </div>
+
+    <div class="header-navbar-item">
+        <a href="{% url 'article_entire' 'textbooks' %}">Textbooks</a>
+    </div>
+
+    <div class="header-navbar-item">
+        <a href="{% url 'article_entire' 'contact' %}">Contact</a>
+    </div>
+</div>

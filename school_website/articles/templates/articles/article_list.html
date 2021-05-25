@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/articles/article_list_styles.css' %}">
+
+<div class='article-list-container'>
+    <div class="info-bar">
+        Latest articles:
+    </div>
+
+    <div class="article-list">
+        {% for article in articles %}
+            <div class="article-list-element">
+
+                <div class="article-list-element-title">
+                    <a href="{% url 'article_entire' article.slug %}">{{ article.title }}</a>
+                </div>
+
+                <div class="article-list-element-date">
+                    <a href="{% url 'article_entire' article.slug %}">{{ article.date }}</a>
+                </div>
+
+                <div class="article-list-element-snippet">
+                    <p>{{ article.short_snippet|safe }}</p>
+                </div>
+
+            </div>
+        {% endfor %}
+    </div>
+
+    <div class="page-selector-container">
+        <div class="page-selector-content">
+            <div class="page-backward">
+            {% if page.has_previous %}
+                <a class="first-page" href="{% url 'article_list' %}?p=1">
+                    <span>1</span></a>
+
+                <a class="prev-page" href="{% url 'article_list' %}?p={{ page.previous_page_number }}">
+                    <span>{{ page.previous_page_number }}</span></a>
+                
+
+            {% endif %}
+            </div>
+
+            <div class='page-current'>
+                <a class="current-page" href="{% url 'article_list' %}?p={{ page.number }}">
+                    <span> {{ page.number }} </span></a>
+            </div>
+
+
+            <div class="page-forward">
+                {% if page.has_next %}
+                    <a class="next-page" href="{% url 'article_list' %}?p={{ page.next_page_number }}">
+                        <span>{{ page.next_page_number }}</span></a>
+
+                    <a class="last-page" href="{% url 'article_list' %}?p={{ last_page_num }}">
+                        <span>{{ last_page_num }}</span></a>
+
+                    
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/articles/article_entire_styles.css' %}">
+
+    <div class="article-entire">
+
+        <div class="article-entire-title">
+            {{ article.title }}
+        </div>
+
+        <div class="article-entire-date">
+            {{ article.date }}
+        </div>
+
+        <div class="article-entire-text">
+            {{ article.text|safe|linebreaks }}
+        </div>
+
+    </div>
+
+{% endblock %}

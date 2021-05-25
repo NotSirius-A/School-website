@@ -1,0 +1,220 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body ::selection{
+    color: #fff;
+    background-color: rgb(46, 46, 46);
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "up-left-filler header-container up-right-filler"
+    "left-filler main-content-container right-filler"
+    "left-filler footer-container right-filler";
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: auto auto auto 150px;
+}
+/* .container > div {
+    border: 1px dashed #888;
+} */
+
+:root {
+    --content-shadow: -10px 0 5px -2px rgba(0, 0, 0, 0.2), 10px 0 5px -2px rgba(0, 0, 0, 0.2);
+}
+
+.main-content-container {
+    background-color: white;
+    box-shadow: var(--content-shadow);
+    grid-area: main-content-container;
+}
+
+.up-left-filler {
+    grid-area: up-left-filler;
+}
+.up-right-filler {
+    grid-area: up-right-filler;
+}
+.left-filler {
+    grid-area: left-filler;
+}
+
+.right-filler {
+    grid-area: right-filler;
+}
+
+header {
+    margin-top: 90px;
+    box-shadow: var(--content-shadow);
+    background-color: #840e41;
+}
+
+.header-container {
+    box-shadow: var(--content-shadow);
+    background-color: inherit;
+
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "header-logo header-other header-other"
+      "header-navbar header-navbar header-navbar";
+    grid-template-columns: auto auto;
+    grid-template-rows: 201px auto;
+    overflow: hidden;
+}
+
+.header-logo {
+    grid-area: header-logo;
+    display: flex;
+    align-items: center
+}
+
+.header-logo img {
+    padding: 5px 5px 5px 5px;
+
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;  
+}
+
+.header-other {
+    grid-area: header-other;
+}
+
+.header-other img {
+    height: 181px;
+    max-width: 100%;
+    float: right;
+    object-fit: cover;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;  
+}
+
+.header-navbar {
+    grid-area: header-navbar;
+    padding-left: 20px;
+    border-top: 2px solid #551430;
+}
+
+.header-navbar-item {
+    display: inline-block;
+    margin-right: 2%;
+    padding: 13px 8px 13px 8px;
+    background-color: inherit;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.header-navbar-item a:hover {
+    color: black;
+}
+
+.header-navbar-item a {
+    text-decoration: none;
+    color: white;
+}
+
+footer {
+    padding: 20px 10px 20px 10px;
+    background-color: #840e41;
+    box-shadow: var(--content-shadow);
+}
+
+.footer-container {
+    grid-area: footer-container;
+    background-color: inherit;
+
+    font-family: inherit;
+    color: #2c0415;
+    font-weight: 600;
+    font-size: 15px;
+
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "footer-name footer-adress footer-author";
+    grid-template-columns: 3fr 6fr 2fr;
+    grid-template-rows: auto;
+}
+
+.footer-name {
+    grid-area: footer-name;
+    background-color: inherit;
+    border-right: #2e2c2d4d solid 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.footer-name > p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.footer-adress {
+    grid-area: footer-adress;
+    background-color: inherit;
+    border-right: #2e2c2d4d solid 2px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.footer-adress > ul {
+    margin-top: 5px;
+}
+
+.footer-adress-title {
+    font-size: inherit;
+}
+
+.footer-adress-info {
+    font-size: 14px;
+    padding-bottom: 5px;
+    font-weight: 400;
+}
+
+.footer-author {
+    grid-area: footer-author;
+    background-color: inherit;
+    position: relative;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.footer-author a {
+    text-decoration: none;
+    color: #0014c5
+}
+
+.footer-author a:hover {
+    color: #fff;
+}
+
+.footer-author > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}

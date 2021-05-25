@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static '/accounts/login_page_styles.css' %}">
+
+<div class='login-container'>
+    <div class="left-filler"></div>
+
+    <div class="login-form-container">
+        <form class='login-form' action="" method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input class='login-form-button' type="submit" value="Login"> 
+        </form>
+    </div>
+</div>
+<div class="right-filler"></div>
+
+{% endblock %}
