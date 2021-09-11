@@ -1,0 +1,6 @@
+File name: specifed in the docker-compose, by default "postgresql_prod.env"
+
+
+POSTGRES_PASSWORD="str"
+POSTGRES_USER="str"
+POSTGRES_DB="str"

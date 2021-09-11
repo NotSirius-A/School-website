@@ -1,0 +1,41 @@
+version: "3.9"
+
+services:
+  nginx:
+    build:
+      context: ./
+      dockerfile: ./deployment/nginx/Dockerfile
+    volumes:
+      - static:/static
+    ports:
+      - "80:80"
+    depends_on:
+      - school-djangocorn
+
+  school-djangocorn:
+    build:
+      context: ./
+      dockerfile: ./deployment/django/Dockerfile
+    expose:
+      - "8000"
+    volumes:
+      - static:/my_app/src/static
+    env_file: ./deployment/django/django_prod.env
+    depends_on:
+      - school-postgresql
+
+  school-postgresql:
+    build:
+      context: ./
+      dockerfile: ./deployment/postgresql/Dockerfile
+    expose: 
+      - "5432"
+    volumes: 
+      - postgres_database:/var/lib/postgresql/data
+    env_file: ./deployment/postgresql/postgresql_prod.env
+
+volumes:
+  static:
+  postgres_database:
+  
+    
