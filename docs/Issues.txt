@@ -1,0 +1,8 @@
+This was my first Django project, hence it's riddled with all kinds problems, here's a list of the most obvious ones.
+
+If this list is still here it means I didn't have time to take care of these issues:
+    - Bad file structure/managment
+    - Bad UI/UX
+    - Low quality code in some places
+    - Almost definetly XSS possible when creating articles. However, only moderators can create articles, so it's not critical
+    - Articles can only be edited/deleted through the admin panel; almost none moderator interface

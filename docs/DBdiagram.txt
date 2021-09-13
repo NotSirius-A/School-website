@@ -1,0 +1,13 @@
+https://dbdiagram.io
+
+
+
+
+
+Table Article {
+  title varchar
+  slug slug
+  text varchar
+  show_on_lists boolean 
+  date datetime
+}

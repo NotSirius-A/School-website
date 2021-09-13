@@ -1,0 +1,10 @@
+Docker daemon + docker-compose required
+
+
+1. Create and customize .env files according to given templates in the deployment/ directory
+2. cd into the root directory of the project
+3. docker-compose up --build -d
+
+
+Disable:
+1. docker-compose down

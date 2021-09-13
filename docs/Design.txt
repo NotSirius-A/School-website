@@ -1,0 +1,10 @@
+Website for a fictional school
+
+I am making this file long after completion, therefore I don't exactly remember what where my design goals
+
+Core functionalities/choices:
+    - Website must work on mobiles
+    - Moderators can create public articles
+    - Articles can be 'hidden', which makes them not appear on lists; can be reached only with a direct link
+    - Some HTML tags allowed within articles
+    - Articles can be created by authenticated users (moderators), by going to 'hidden' url .../article/submit/form
